@@ -61,9 +61,8 @@
       '((width . 120)
 	(height . 65)))
 
-;; dracula theme setup
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/dracula-theme.el")
-(load-theme 'dracula t)
+;; material theme setup
+(load-theme 'material t)
 
 ;; powerline setup
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
