@@ -1,0 +1,5 @@
+* Problems
+
+** jedi:install-server failed with `virtualenv` not found
+
+*** install `exec-from-shell-path`
