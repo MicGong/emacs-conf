@@ -90,3 +90,7 @@
 ;; magit setup
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;; exec-path-from-shell setup
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
