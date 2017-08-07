@@ -2,6 +2,8 @@
 ;; dracular-theme -- https://github.com/dracula
 ;; powerline -- https://github.com/jonathanchu/emacs-powerline
 ;; multiple-cursors -- https://github.com/magnars/multiple-cursors.el
+;; projectile -- https://github.com/bbatsov/projectile
+;; magit -- https://magit.vc/
 
 ;; init file
 
@@ -78,3 +80,14 @@
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+
+;; company-jedi setup
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+
+(add-hook 'python-mode-hook 'my/python-mode-hook)
+
+;; magit setup
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
