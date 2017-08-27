@@ -99,6 +99,7 @@
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
+
 ;; anaconda
 (add-hook 'python-mode-hook 'anaconda-mode)
 
