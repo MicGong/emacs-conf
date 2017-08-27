@@ -74,6 +74,10 @@
  '(mode-line ((t (:foreground "#030303" :background "#77f442" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
 
+
+;; projectile-mode
+(projectile-mode +1)
+
 ;; multiple cursor setup
 (require 'multiple-cursors)
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -97,3 +101,24 @@
 
 ;; anaconda
 (add-hook 'python-mode-hook 'anaconda-mode)
+
+(anaconda-mode +1)
+
+
+;; key-chord
+(require 'key-chord)
+(key-chord-define-global ",," 'previous-multiframe-window)
+(key-chord-define-global ".." 'next-multiframe-window)
+(key-chord-define-global " 0" 'delete-window)
+(key-chord-define-global " 1" 'delete-other-windows)
+(key-chord-define-global " 2" 'split-window-below)
+(key-chord-define-global " 3" 'split-window-horizontally)
+(key-chord-define-global " s" 'save-buffer)
+(key-chord-define-global " e" 'er/expand-region)
+(key-chord-define-global " b" 'switch-to-buffer)
+(key-chord-define-global "o0" 'find-file)
+(key-chord-define-global "p-" 'projectile-find-file)
+(key-chord-define-global " ," 'beginning-of-buffer)
+(key-chord-define-global " ." 'end-of-buffer)
+
+(key-chord-mode +1)
