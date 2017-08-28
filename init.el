@@ -105,6 +105,8 @@
 			      (setq indent-tab-mode 4)
 			      (setq tab-width 4)
 			      (setq python-indent 4)))
+(python-mode +1)
+
 
 ;; beautify json
 (defun beautify-json ()
