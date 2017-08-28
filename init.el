@@ -105,7 +105,6 @@
 			      (setq indent-tab-mode 4)
 			      (setq tab-width 4)
 			      (setq python-indent 4)))
-(python-mode +1)
 
 
 ;; beautify json
@@ -134,7 +133,6 @@
 (key-chord-define-global " s" 'save-buffer)
 (key-chord-define-global " e" 'er/expand-region)
 (key-chord-define-global " b" 'switch-to-buffer)
-(key-chord-define-global " k" 'kill-buffer)
 (key-chord-define-global "o0" 'find-file)
 (key-chord-define-global "p-" 'projectile-find-file)
 (key-chord-define-global " ," 'beginning-of-buffer)
