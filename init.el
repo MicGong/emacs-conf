@@ -100,6 +100,21 @@
   (exec-path-from-shell-initialize))
 
 
+;; add python mode param
+(add-hook 'python-mode-hook (lambda()
+			      (setq indent-tab-mode 4)
+			      (setq tab-width 4)
+			      (setq python-indent 4)))
+
+;; beautify json
+(defun beautify-json ()
+  (interactive)
+  (let ((b (if mark-active (min (point) (mark)) (point-min)))
+        (e (if mark-active (max (point) (mark)) (point-max))))
+    (shell-command-on-region b e
+     "python -mjson.tool" (current-buffer) t)))
+
+
 ;; anaconda
 (add-hook 'python-mode-hook 'anaconda-mode)
 
